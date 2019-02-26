@@ -9,9 +9,66 @@ description: Instalasi Ruby dan Rails di Windows menggunakan installer.
   <h1 class="text-center">Instalasi Ruby dan Rails di Windows</h1>
 
   <section class="margin-bottom-5em">
+    Berikut adalah langkah-langkah untuk menginstall Ruby dan Rails di Windows:
+    <ul>
+      <li><a href="#ruby">Instalasi Ruby</a></li>
+      <li><a href="#rails">Instalasi Rails</a></li>
+    </ul>
+    
+    <p>
+    	1. Download Ruby Installer for Windows dari tautan berikut:
+    	`https://rubyinstaller.org/downloads/`
 
+    	Catatan: 
+    	Pada instalasi kali ini kita akan menggunakan Ruby+Devkit 2.5.X (x64). Untuk kebutuhan kompilasi gem dengan native extension (C) maka kita membutuhkan MSYS2-Devkit yang sudah diikutsertakan dalam file rubyinstaller tersebut.
+    </p>
+    <p>
+    	2. Jalankan file installer rubyinstaller-devkit-2.5.X-x64.exe, lalu ikuti langkah berikut:
+    	 <ul>
+	      <li>Pilih "I Accept the License" lalu klik Next</li>
+	      <li>Biarkan setting bawaan dari instalasi (folder, PATH, dll) lalu klik Install</li>
+	      <li>Klik Next pada window Select Components</li>
+	      <li>Kita akan melakukan setup MSYS2 dan development toolchain dengan ridk lalu klik Finish</li>
+	      <li>Ketik 3 pada window setup ruby installer 2 for windows</li>
+	      <li>Pastikan instalasi MSYS2 dan MINGW sukses</li>
+	    </ul>
+    </p>
+    <p>
+    	3. Buka Ruby terminal/command prompt, dengan langkah berikut:
+    	<ul>
+    		<li>Buka Start Menu</li>
+    		<li>Klik All Programs</li>
+    		<li>Pergi ke Ruby 2.5.X-x64 with MSYS2</li>
+    		<li>Buka Start Command Prompt with Ruby</li>
+    	</ul>
+    </p>
+    <p>
+    	4. Untuk melihat versi Ruby yang sedang digunakan:
+    	{% gist ceed7e67ab2ff4cf64b0d2632e10e85c ruby-version.sh %}
+    </p>
+    <p>
+    	Sampai di sini Ruby telah berhasil terinstal, selanjutnya kita akan menginstal Rails.
+
+    	Secara default Gem telah terinstall, perintah di bawah ini untuk memastikan bahwa Kalian menggunakan Gem versi terbaru:
+    	{% gist ceed7e67ab2ff4cf64b0d2632e10e85c gem-update-system.sh %}
+    </p>
+
+    <hr class="hr-wave">
+
+    <h4 class="text-center" id="ruby">
+    <span class="word-bg font-chelsea-market">
+      Instalasi Ruby
+    </span>
+    </h4>
+    
+    <hr class="hr-wave">
+
+    <h4 class="text-center" id="rails">
+    <span class="word-bg font-chelsea-market">
+      Instalasi Rails
+    </span>
+    </h4>
   </section>
 
-  {% include install/need_help.html %}
 
 </section>
